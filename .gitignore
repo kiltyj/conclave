@@ -6,3 +6,12 @@ debug.js
 .DS_Store
 /performance/logs/*
 !/performance/logs/.gitkeep
+# Devenv
+.devenv*
+devenv.local.nix
+
+# direnv
+.direnv
+
+# pre-commit
+.pre-commit-config.yaml

@@ -1,22 +1,42 @@
-extends layout.pug
-
-block nav
-  .about
-    a.link(href='/about' target="_blank") What is Conclave?
-  .case-study
-    a.link(href='https://conclave-team.github.io/conclave-site/' target="_blank") Case Study
-  .team
-    a.link(href='https://conclave-team.github.io/conclave-site/team/' target="_blank") Our Team
-  .github
-    a.link(href='https://github.com/conclave-team/conclave' target="_blank") Fork on GitHub
-
-block link
-  p.sharing-link
-    a.link(id='myLink' target="_blank") Sharing Link
-    span(id="myLinkInput" class="aside disappear")
-    span(class="copy-container" data-tooltip="Copy to Clipboard")
-      i(data-feather="copy" class="copy-link" color="rgb(17, 117, 232)")
-    span(class="copy-status") Copied!
-
-block scripts
-  script(src='js/main.js')
+doctype html
+html(lang="en")
+  head
+    title= title
+    link(rel='stylesheet' href='css/style.css')
+    link(rel='shortcut icon' href='assets/img/favicon.ico' type='image/x-icon')
+    script(src='https://cjrtnc.leaningtech.com/2.3/loader.js')
+  body
+    #conclave.hide
+      .editor
+        .header
+          .header-left
+            a.link(id='saveLink' target="_blank") Save File
+            a.link(id='sharingLink' target="_blank") Share Link
+            span(id="sharingLinkInput" class="aside disappear")
+            a.link(id='copyLink' target="_blank") Copy Link
+            .copyStatus Copied!
+          .header-right
+            a.link(id='acknowledgements' target='_blank') Acknowledgements
+        .source
+          textarea()
+      .output
+        .header
+          p#peerId Collaborators:
+        .outputImage
+          img(id='renderImage' src='assets/img/initializing-plantuml.png')
+    .loading
+      p Loading
+      .sk-fading-circle
+        .sk-circle1.sk-circle
+        .sk-circle2.sk-circle
+        .sk-circle3.sk-circle
+        .sk-circle4.sk-circle
+        .sk-circle5.sk-circle
+        .sk-circle6.sk-circle
+        .sk-circle7.sk-circle
+        .sk-circle8.sk-circle
+        .sk-circle9.sk-circle
+        .sk-circle10.sk-circle
+        .sk-circle11.sk-circle
+        .sk-circle12.sk-circle
+    script(src='js/main.js')
